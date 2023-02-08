@@ -23,20 +23,9 @@ const getAllMovies = Object.freeze<ServerRoute>({
 
 
 
-// /**
-//  * @handle `GET /with-content-type`
-//  */
-// const getWithContentType = Object.freeze<ServerRoute>({
-//   method: 'GET',
-//   path: '/with-content-type',
-//   handler: async (_req, h) => {
-//     const res = await Promise.resolve(hello())
-//     return h.response(res).header('content-type', 'text/plain')
-//   },
-// })
 
 
 /**
- * Routes of the plugin `hello`
+ * Routes of the plugin `movies`
  */
 export default [getAllMovies]

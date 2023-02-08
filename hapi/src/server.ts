@@ -9,6 +9,7 @@ import health from './routes/health'
 import validated from './routes/validated'
 import authBasic from './routes/auth-basic'
 import movies from './routes/movies'
+import todolist from './routes/todolist'
 
 
 /**
@@ -35,6 +36,7 @@ export default async (options?: Hapi.ServerOptions): Promise<Readonly<Hapi.Serve
     server.register(validated, {routes: {prefix: '/api/validated'}}),
     server.register(authBasic, {routes: {prefix: '/api/auth-basic'}}),
 	server.register(movies, {routes: {prefix: '/api/movies'}}),
+	server.register(todolist, {routes: {prefix: '/api/todolist'}}),
   ])
 
   await server.initialize()

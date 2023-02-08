@@ -10,11 +10,12 @@ export default Object.freeze<Hapi.Plugin<void>>({
   version: '1.0.0',
   register: async server => {
 
-    const usr = 'movies'
-    const pwd = 'movies123'
+    const usr = 'tasks'
+    const pwd = 'tasks123'
     const options: hapiMongo.Options = {
-      url: `mongodb+srv://${usr}:${pwd}@editbackendmovies.7mz8wtw.mongodb.net/sample_mflix?retryWrites=true&w=majority`,
-      settings: {useUnifiedTopology: true},
+    //   url: `mongodb+srv://${usr}:${pwd}@editbackendmovies.7mz8wtw.mongodb.net/sample_mflix?retryWrites=true&w=majority`,
+	  url: `mongodb+srv://${usr}:${pwd}@tasksdb.p2uz1ls.mongodb.net/Tasks?retryWrites=true&w=majority`, 
+	  settings: {useUnifiedTopology: true},
       decorate: true,
     }
 
